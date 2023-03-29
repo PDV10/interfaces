@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Clase 1 - Template</title>
+	</head>
+	<body>
+		<canvas id="canvas" width="900" height="600" style="border: solid 1px black;"></canvas>
+	</body>
+
+	<script type="text/javascript">
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        /* ctx.fillStyle = "#000";
+        ctx.fillRec(0,0,900,600);*/
+        
+        var imgHeight = 0;
+        var imgWidth = 0;
+
+        var imgData;
+
+        var imgHtml5 = new Image();
+        imgHtml5.src = "img.png";
+
+        imgHtml5.onload = function(){
+            ctx.drawImage(this, 0 ,0)
+        }
+	</script>
+</html>
