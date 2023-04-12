@@ -39,7 +39,6 @@ canvas.addEventListener('mousemove', (e) =>{
 
 canvas.addEventListener('mouseup', (e)=>{
     figura = null;
-    canvas.removeEventListener('mousedown', null);
 });
 
 window.addEventListener('keydown', (e)=>{
