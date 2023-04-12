@@ -1,3 +1,5 @@
+"use strict";
+
 class Figura {
     constructor(posX,posY,fill,ctx,estilo){
         this.posX = posX;

@@ -1,0 +1,13 @@
+canvas{
+    border: 1px solid black;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(250, 144, 68);
+    font-size: 35px;
+    font-family: monospace;
+    font-style: italic; 
+}

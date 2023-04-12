@@ -1,3 +1,5 @@
+"use strict";
+
 class Ellipse extends Figura{
     constructor(posX,posY,radioX,radioY,fill,ctx,estilo){
         super(posX,posY,fill,ctx,estilo);
@@ -10,9 +12,7 @@ class Ellipse extends Figura{
         this.ctx.beginPath();
         this.ctx.ellipse(this.posX,this.posY,this.radioX,this.radioY,0,0,2 * Math.PI); //ctx tiene un metodo propio para crear ellipses 
         this.ctx.fill();
-        if(this.estilo){
-            this.ctx.stroke(); //es el borde
-        }
+        this.ctx.stroke(); //es el borde
     }
 
     estaElPunto(x,y){

@@ -1,15 +1,14 @@
 "use strict"
-main();
 
-let canvas = document.getElementById('canvas');
-let ctx = canvas.getContext('2d');
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height
 
 let figura = null;
 
 let figuras = [];
-const CANT_FIG = 20;
+const CANT_FIG = 1000;
 
 function main(){
     //  pintarCanvas();
@@ -18,31 +17,32 @@ function main(){
 
 function crearFiguras(){
     if(figuras.length < CANT_FIG){
-        agregarFigura(figuras.length < CANT_FIG/2);
+        agregarFigura(/* figuras.length < (CANT_FIG/2 )*/);
         figuras[figuras.length - 1].draw();
-        setTimeout( () => {crearFiguras();}, 100);     
+        setTimeout(()=>{crearFiguras()}, 100);     
     }
 }
 
-function agregarFigura(estilo){
+function agregarFigura(/* estilo */){
     let posX = Math.round(Math.random() * canvasWidth);
     let posY = Math.round(Math.random() * canvasHeight);
     let color = randomRGB();
+    let estilo = Math.round(Math.random());
 
     if(estilo){
-        let ellipse = new ellipse(posX, posY, Math.round(Math.random()*50), Math.round(Math.random() * 50), color, ctx, false );
-        figuras.push(ellipse);
+        let ellipse = new Ellipse(posX, posY, Math.round(Math.random()*50), Math.round(Math.random() * 50) , color, ctx, false );
+        figuras.push(ellipse); 
     }else{
-        let rect = new rect(posX, posY, Math.round(Math.random()*50), Math.round(Math.random() * 50), color, ctx, false );
+        let rect = new Rect(posX, posY, Math.round(Math.random()*50), Math.round(Math.random() * 50),
+         color, ctx, false );
        figuras.push(rect);
     }
-
+}
 
 function randomRGB(){
     let r = Math.round(Math.random() * 255);
     let g = Math.round(Math.random() * 255);
     let b = Math.round(Math.random() * 255);
     let a = 255;
-    return `rgba (${r},${g},${b},${a})`;
+    return `rgba(${r}, ${g}, ${b}, ${a})`;
 }
- }
