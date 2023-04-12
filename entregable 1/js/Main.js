@@ -65,6 +65,7 @@ function buscarFiguraCliqueada(x,y){
             return elemento;
         }
     }
+    return null;
 }
 
 function main(){
