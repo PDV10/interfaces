@@ -43,7 +43,7 @@ canvas.addEventListener('mouseup', (e)=>{
 
 window.addEventListener('keydown', (e)=>{
     if(e.key == 'ArrowUp'|| e.key == "w"|| e.key == "W"){
-        figuraClickeada.moveTo(figuraClickeada.posX , figuraClickeada.posY - 3);
+        figuraClickeada.moveTo(figuraClickeada.posX , figuraClickeada.posY - 3); 
         dibujar();
     }else if(e.key == 'ArrowDown' || e.key == "s"|| e.key == "S"){
         figuraClickeada.moveTo(figuraClickeada.posX , figuraClickeada.posY + 3);

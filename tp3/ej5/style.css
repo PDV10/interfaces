@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-img{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid black;
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+}
+
+img{
+    width: 660px;
+    animation: mover 1s steps(6) infinite;
+}
+
+@keyframes mover {
+    
+   to{
+        transform: translateX(-550px);
+    }
+}
